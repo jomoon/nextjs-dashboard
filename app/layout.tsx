@@ -1,3 +1,6 @@
+import "@/app/ui/global.css"
+import {inter} from '@/app/ui/fonts'
+// 所有地下的都会使用这套UI
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
+      {/* <body>{children}</body> */}
     </html>
   );
 }
